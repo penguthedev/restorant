@@ -1,6 +1,6 @@
 const API_URL =
     import.meta.env.VITE_API_URL ??
-    "https://resturant-project-37lu.onrender.com/api";
+    "https://resturant-project-xp3v.onrender.com/api";
 
 const TOKEN_KEY = "token";
 
