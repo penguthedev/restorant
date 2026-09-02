@@ -1,6 +1,8 @@
 const API_URL =
-    import.meta.env.VITE_API_URL ??
+    import.meta.env.VITE_API_URL ||
     "https://resturant-project-server.onrender.com/api";
+
+console.log("API_URL is:", API_URL);
 
 const TOKEN_KEY = "token";
 
@@ -188,7 +190,12 @@ async function request<T>(
                 ...options.headers,
             },
         });
-    } catch {
+    } catch (err) {
+        console.error(
+            "Request failed:",
+            `${API_URL}${path}`,
+            err,
+        );
         throw new Error("Can't reach the server.");
     }
 
